@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: green;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  height: 400px;
+  width: 285px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 8px black;
+  font-size: 142px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suit {
+  color: black;
+  font-size: 71px;
+  margin: 2% 8%;
+}
+
+.before {
+  align-self: flex-start;
+}
+.after {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.club {
+}
+.heart {
+}
+.diamond {
+}
