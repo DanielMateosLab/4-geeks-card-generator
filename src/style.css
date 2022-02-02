@@ -7,6 +7,8 @@ body {
 .container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -28,20 +30,40 @@ body {
 .suit {
   color: black;
   font-size: 71px;
-  margin: 2% 8%;
+}
+
+.value {
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .before {
   align-self: flex-start;
+  margin-left: 8%;
+  margin-top: 2%;
 }
 .after {
   align-self: flex-end;
   transform: rotate(180deg);
+  margin-right: 8%;
+  margin-bottom: 2%;
 }
 
-.club {
+.shuffle-btn {
+  padding: 0.5rem 1rem;
+  background: rgb(255, 255, 20);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
 }
-.heart {
-}
-.diamond {
+
+nav {
+  background: saddlebrown;
+  color: white;
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  text-align: center;
 }

@@ -12,7 +12,22 @@ const CARD_SUITS = [
 ];
 
 window.onload = function() {
+  let autoShuffler = null;
   shuffleCards();
+
+  document
+    .querySelector(".shuffle-btn")
+    .addEventListener("click", shuffleCards);
+
+  document
+    .querySelector("#auto-shuffle")
+    .addEventListener("change", function() {
+      if (!this.checked) {
+        clearInterval(autoShuffler);
+      } else {
+        autoShuffler = startAutoShuffler();
+      }
+    });
 };
 
 function pickRandom(array) {
@@ -29,4 +44,10 @@ function shuffleCards() {
   });
 
   document.querySelector(".value").innerHTML = value;
+}
+
+function startAutoShuffler() {
+  shuffleCards();
+
+  return setInterval(() => shuffleCards(), 10 * 1000);
 }
