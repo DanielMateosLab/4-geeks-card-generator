@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background: green;
+  padding: 2rem;
 }
 
 .container {
@@ -51,11 +52,10 @@ body {
 }
 
 .shuffle-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   background: rgb(255, 255, 20);
   border-radius: 8px;
-  font-size: 1.25rem;
-  margin-top: 0.75rem;
+  font-size: 1rem;
 }
 
 nav {
@@ -65,5 +65,10 @@ nav {
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
