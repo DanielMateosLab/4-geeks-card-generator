@@ -34,7 +34,7 @@ window.onload = function() {
     setCardSize(this.value);
   });
 
-  setCardSize(30);
+  setCardSize(50);
 };
 
 function pickRandom(array) {
@@ -59,15 +59,15 @@ function startAutoShuffler() {
   return setInterval(() => shuffleCards(), 10 * 1000);
 }
 
-function setCardSize(vw) {
+function setCardSize(vh) {
   const cardElement = document.querySelector(".card");
   const suitElements = document.querySelectorAll(".suit");
   const valueElement = document.querySelector(".value");
 
-  cardElement.style.width = Math.round(vw) + "vw";
-  cardElement.style.height = Math.round(vw / CARD_SIZE_RATIO) + "vw";
+  cardElement.style.width = Math.round(vh * CARD_SIZE_RATIO) + "vh";
+  cardElement.style.height = Math.round(vh) + "vh";
   suitElements.forEach(
-    element => (element.style.fontSize = Math.round(vw / 4) + "vw")
+    element => (element.style.fontSize = Math.round(vh / 4) + "vh")
   );
-  valueElement.style.fontSize = Math.round(vw / 2) + "vw";
+  valueElement.style.fontSize = Math.round(vh / 2) + "vh";
 }
