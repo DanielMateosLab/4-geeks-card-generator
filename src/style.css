@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -20,23 +20,27 @@ body {
   width: 285px;
   border-radius: 8px;
   box-shadow: 6px 6px 8px black;
-  font-size: 142px;
   position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition-property: width height font-size;
+  transition-duration: 0.2s;
 }
 
 .suit {
   color: black;
   font-size: 71px;
+  transition: font-size 0.2s;
 }
 
 .value {
   position: absolute;
   text-align: center;
+  font-size: 142px;
   width: 100%;
+  transition: font-size 0.2s;
 }
 
 .before {
@@ -69,6 +73,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }

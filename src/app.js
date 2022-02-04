@@ -28,6 +28,13 @@ window.onload = function() {
         autoShuffler = startAutoShuffler();
       }
     });
+
+  const sizeSliderElement = document.querySelector("#size-slider");
+  sizeSliderElement.addEventListener("change", function() {
+    setCardSize(this.value);
+  });
+
+  setCardSize(30);
 };
 
 function pickRandom(array) {
@@ -50,4 +57,17 @@ function startAutoShuffler() {
   shuffleCards();
 
   return setInterval(() => shuffleCards(), 10 * 1000);
+}
+
+function setCardSize(vw) {
+  const cardElement = document.querySelector(".card");
+  const suitElements = document.querySelectorAll(".suit");
+  const valueElement = document.querySelector(".value");
+
+  cardElement.style.width = Math.round(vw) + "vw";
+  cardElement.style.height = Math.round(vw / CARD_SIZE_RATIO) + "vw";
+  suitElements.forEach(
+    element => (element.style.fontSize = Math.round(vw / 4) + "vw")
+  );
+  valueElement.style.fontSize = Math.round(vw / 2) + "vw";
 }
